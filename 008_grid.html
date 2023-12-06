@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- https://tailwindcss.com/docs/grid-template-columns -->
+  <!-- https://tailwindcss.com/docs/grid-column -->
+  <!-- https://tailwindcss.com/docs/grid-template-rows -->
+
+  <!-- grid-rows-{}, grid-cols-{}, gap-{} -->
+
+  <h1>1</h1>
+  <div class="grid grid-cols-3 gap-2 border-red-400">
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+  </div>
+
+  <h1>2</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+  </div>
+
+  <h1>3</h1>
+  <div class="grid grid-cols-3 grid-rows-3 gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+    <div class="border-4 border-blue-500">hello</div>
+  </div>
+
+  
+  <h1>4</h1>
+  <div class="grid grid-cols-3 grid-rows-3 gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- grid-flow-col -> grid-auto-flow: column; -->
+  <!-- grid 적용된 요소의 배치순서가 세로로 변함 -->
+  <!--
+     1 2 3 4  -> 1 4
+     5 6         2 5
+                 3 6 
+                  -->
+  <h1>5</h1>
+  <div class="grid grid-cols-4 grid-rows-3 grid-flow-col gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- col-span-2 -> 가로로 2개요소만큼 셀(공간) 차지함 -->
+  <!-- row-span-2 -> 세로로 2개요소만큼 셀(공간) 차지함 -->
+  <h1>6</h1>
+  <div class="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2 border-4 border-red-400">
+    <div class="col-span-2 border-4 border-blue-500">hello 1</div>
+    <div class="col-span-2 border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- 태그의 옆에 (grid) 버튼을 눌러 grid를 활성화 했을때 -->
+  <!-- 나오는 번호를 이용해 각 셀을 통합할 수 있다. -->
+  <h1>7</h1>
+  <div class="grid grid-cols-4 grid-rows-4 gap-2 border-4 border-red-400">
+    <div class="col-start-1 col-end-3 row-start-1 row-end-3 border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- start 위치를 바꿔서 특정요소의 위치를 지정할 수도 있다. -->
+  <h1>8</h1>
+  <div class="grid grid-cols-4 grid-rows-4 gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello 1</div>
+    <div class="col-start-1 row-start-2 border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <h1>9</h1>
+  <div class="grid grid-cols-4 grid-rows-4 gap-2 border-4 border-red-400">
+    <div class="md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <h1>10</h1>
+  <div class="grid grid-cols-4 grid-rows-4 gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- items-center, items-start, items-end, items-stretch... -->
+  <!-- items-center -> align-items: center; -->
+  <!-- grid 속성의 align-items 임 !! -->
+  <h1>11</h1>
+  <div class="grid grid-cols-4 grid-rows-4 items-center gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <h1>12</h1>
+  <div class="grid grid-cols-4 grid-rows-4 items-stretch gap-2 border-4 border-red-400">
+    <div class="h-20 border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="h-20 border-4 border-blue-500">hello 3</div>
+    <div class="h-20 border-4 border-blue-500">hello 4</div>
+    <div class="h-20 border-4 border-blue-500">hello 5</div>
+    <div class="h-20 border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- justify-items-start, justify-items-end, justify-items-center -->
+  <h1>13</h1>
+  <div class="grid grid-cols-4 grid-rows-4 justify-items-stretch gap-2 border-4 border-red-400">
+    <div class="h-20 border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="h-20 border-4 border-blue-500">hello 3</div>
+    <div class="h-20 border-4 border-blue-500">hello 4</div>
+    <div class="h-20 border-4 border-blue-500">hello 5</div>
+    <div class="h-20 border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <!-- content-start, content-end, content-center,
+  content-between, content-around -->
+  <h1>14</h1>
+  <div class="h-80 grid grid-cols-4 content-start gap-2 border-4 border-red-400">
+    <div class="h-20 border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500">hello 2</div>
+    <div class="h-20 border-4 border-blue-500">hello 3</div>
+    <div class="h-20 border-4 border-blue-500">hello 4</div>
+    <div class="h-20 border-4 border-blue-500">hello 5</div>
+    <div class="h-20 border-4 border-blue-500">hello 6</div>
+  </div>
+
+  <h1>15</h1>
+  <div class="grid grid-cols-4 gap-2 border-4 border-red-400">
+    <div class="border-4 border-blue-500">hello 1</div>
+    <div class="border-4 border-blue-500 order-first">hello 2</div>
+    <div class="border-4 border-blue-500">hello 3</div>
+    <div class="border-4 border-blue-500">hello 4</div>
+    <div class="border-4 border-blue-500">hello 5</div>
+    <div class="border-4 border-blue-500">hello 6</div>
+  </div>
+</body>
+</html>
